@@ -1,32 +1,98 @@
-# Prerequisites
-*.d
+namespace offsets
+{
+	uintptr_t client_render_targets = 0x1fdefa0;
+	uintptr_t ibase_client_dll = 0x19e1830;
+	uintptr_t iclient_entity_list = 0x1fde7b0;
+	uintptr_t cprediction = 0x1fde7b8;
+	uintptr_t iv_model_render = 0x128b080;
+	uintptr_t vgui_system = 0x1f986e0;
+	uintptr_t iv_render_view = 0x7519818;
+	uintptr_t iv_debug_overlay = 0x75b49a0;
+	uintptr_t iv_model_info_client = 0x7519828;
+	uintptr_t iv_engine_client = 0x12799d8;
+	uintptr_t iv_engine_trace = 0x7519830;
+	uintptr_t inetwork_string_table = 0x7519840;
+	uintptr_t cnetwork_u64_table = 0x7519848;
+	uintptr_t cinput = 0x1d94f60;
+	uintptr_t cengine = 0x1292410;
+	uintptr_t iswapchain = 0xb911f98;
+	uintptr_t cl_entitylist = 0x19fbcd8;
+	uintptr_t local_entity_handle = 0x127d8bc;
+	uintptr_t local_player = 0x1daca88;
+	uintptr_t global_vars = 0x135c850;
+	uintptr_t name_list = 0xb9f7f40;
+	uintptr_t view_render = 0x1fe00b0;
+	uintptr_t view_matrix = 0x602581;
+	uintptr_t client_state = 0x135cbd0;
+	uintptr_t sign_on_state = 0x135cc68;
+	uintptr_t level_name = 0x135cd80;
+	uintptr_t glow_enable = 0x3c8;
+	uintptr_t glow_type = 0x2c0;
+	uintptr_t glow_color = 0x1d0;
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+      //CAI_BaseNPC
+			constexpr auto m_localOrigin = 0x4; // Vector
+			constexpr auto m_hGroundEntity = 0x434; // Integer
+			constexpr auto m_iHealth = 0x438; // Integer
+			constexpr auto m_localAngles = 0x490; // Vector
+			constexpr auto m_iMaxHealth = 0x578; // Integer
+			constexpr auto m_lifeState = 0x798; // Integer
+			constexpr auto m_fireteamSlotIndex = 0x1c50; // Integer
+			constexpr auto m_aiSprinting = 0x1dba; // Integer
+			constexpr auto m_aiNetworkFlags = 0x1ddc; // Integer
+			constexpr auto m_isHologram = 0x1de0; // Integer
+			constexpr auto m_title = 0x1de1; // String
+			constexpr auto m_aiSettingsIndex = 0x1e04; // Integer
+			constexpr auto m_subclass = 0x1e08; // Integer
 
-# Precompiled Headers
-*.gch
-*.pch
+      //CAmbientGeneric
+			constexpr auto m_radius = 0xa60; // Float
+			constexpr auto m_isEnabled = 0xa64; // Integer
+			constexpr auto m_networkTableSoundID = 0xa70; // Integer
+			constexpr auto m_networkedSegmentEndpointWorldSpace = 0xa78; // Vector
+			constexpr auto m_hasPolylineSegments = 0xa84; // Integer
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+      //CBaseAnimating
+			constexpr auto m_animPlaybackRate = 0x10; // Float
+			constexpr auto m_animFrozen = 0x14; // Integer
+			constexpr auto m_animModelIndex = 0x18; // Integer
+			constexpr auto m_nNewSequenceParity = 0x20; // Integer
+			constexpr auto m_bClientSideRagdoll = 0x84; // Integer
+			constexpr auto m_vecForce = 0x88; // Vector
+			constexpr auto m_flEstIkOffset = 0x94; // Float
+			constexpr auto m_passDamageToParent = 0x7c4; // Integer
+			constexpr auto m_animNetworkFlags = 0xa88; // Integer
+			constexpr auto m_animActive = 0xa8c; // Integer
+			constexpr auto m_animCollisionEnabled = 0xa8f; // Integer
+			constexpr auto m_animRelativeToGroundEnabled = 0xa90; // Integer
+			constexpr auto m_animPlantingEnabled = 0xa91; // Integer
+			constexpr auto m_animInitialPos = 0xa94; // Vector
+			constexpr auto m_animInitialVel = 0xaa0; // Vector
+			constexpr auto m_animInitialRot = 0xaac; // Table
+			constexpr auto m_animInitialCorrectPos = 0xabc; // Vector
+			constexpr auto m_animInitialCorrectRot = 0xac8; // Table
+			constexpr auto m_animEntityToRefOffset = 0xad8; // Vector
+			constexpr auto m_animEntityToRefRotation = 0xae4; // Table
+			constexpr auto m_animScriptSequence = 0xafc; // Integer
+			constexpr auto m_animScriptModel = 0xb00; // Integer
+			constexpr auto m_animIgnoreParentRot = 0xb04; // Integer
+			constexpr auto m_animMotionMode = 0xb08; // Integer
+			constexpr auto m_syncingWithEntity = 0xb84; // Integer
+			constexpr auto m_predictedAnimEventCount = 0xbd0; // Integer
+			constexpr auto m_predictedAnimEventTarget = 0xbd4; // Integer
+			constexpr auto m_predictedAnimEventSequence = 0xbd8; // Integer
+			constexpr auto m_predictedAnimEventModel = 0xbdc; // Integer
+			constexpr auto m_nRagdollImpactFXTableId = 0xbf4; // Integer
+			constexpr auto m_flSkyScaleStartValue = 0xbf8; // Float
+			constexpr auto m_flSkyScaleEndValue = 0xbfc; // Float
+			constexpr auto m_sequenceTransitionerLayerCount = 0xdc0; // Integer
+			constexpr auto m_nSkin = 0xea8; // Integer
+			constexpr auto m_skinMod = 0xeac; // Integer
+			constexpr auto m_nBody = 0xeb0; // Integer
+			constexpr auto m_camoIndex = 0xeb4; // Integer
+			constexpr auto m_nForceBone = 0xef0; // Integer
+			constexpr auto m_bSequenceFinished = 0xf54; // Integer
+			constexpr auto m_lockedAnimDeltaYaw = 0xf58; // Float
+			constexpr auto m_flModelScale = 0xf60; // Float
+      constexpr autom_usable = 0xa90; // Integer
+      
